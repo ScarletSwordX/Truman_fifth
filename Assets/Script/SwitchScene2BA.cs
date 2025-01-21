@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class SwitchScene12 : MonoBehaviour
+public class SwitchScene2BA : MonoBehaviour
 {
     public bool isF;
     // Start is called before the first frame update
@@ -23,19 +22,20 @@ public class SwitchScene12 : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         isF = false;
     }
-
     void Switch()
     {
-        if (isF&Input.GetKeyDown(KeyCode.F))
+        if (isF & Input.GetKeyDown(KeyCode.F))
         {
-            SceneManager.LoadScene("Scene2", LoadSceneMode.Single);
+            GameObject go = GameObject.FindWithTag("Door3");
+            go.transform.position = new Vector3(78, 1, 0);
+            transform.position = new Vector3(129, 1, 0);
         }
     }
 }

@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class Answer1 : MonoBehaviour
+public class SwitchScene1AB : MonoBehaviour
 {
-
+    public bool isF;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,18 +14,11 @@ public class Answer1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Switch();
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Answer1"))
-        {
-            foreach (Transform child in transform)
-            {
-                child.gameObject.SetActive(true);
-            }
-        }
+        isF = true;
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -35,13 +27,15 @@ public class Answer1 : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Answer1"))
+        isF = false;
+    }
+    void Switch()
+    {
+        if (isF & Input.GetKeyDown(KeyCode.F))
         {
-            foreach (Transform child in transform)
-            {
-                child.gameObject.SetActive(false);
-            }
+            GameObject go = GameObject.Find("Door4");
+            go.transform.position = new Vector3(24, 1, 0);
+            transform.position = new Vector3(-37, 1, 0);
         }
     }
-
 }

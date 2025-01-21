@@ -1,20 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class SwitchSceneBA : MonoBehaviour
+public class BookShelf : MonoBehaviour
 {
+    public GameObject TextBox;
+    public TextMeshProUGUI Text;
+    public string npcText;
     public bool isF;
+    public bool isG;
+    public GameObject Image;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        Switch();
+        interaction();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -28,14 +35,23 @@ public class SwitchSceneBA : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         isF = false;
+        TextBox.SetActive(false);
+        Image.SetActive(false);
+        if (isG)
+        {
+            SceneManager.LoadScene("Scene3", LoadSceneMode.Single);
+        }
     }
-    void Switch()
+
+    void interaction()
     {
         if (isF & Input.GetKeyDown(KeyCode.F))
         {
-            GameObject go = GameObject.FindWithTag("Door3");
-            go.transform.position = new Vector3(24, 1, 0);
-            transform.position = new Vector3(85, 1, 0);
+            TextBox.SetActive(true);
+            Image.SetActive(true);
+            Text.text = npcText;
+            isG = true;
         }
+
     }
 }

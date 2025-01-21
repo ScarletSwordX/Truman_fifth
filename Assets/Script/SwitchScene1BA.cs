@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwitchSceneAB : MonoBehaviour
+public class SwitchScene1BA : MonoBehaviour
 {
     public bool isF;
     // Start is called before the first frame update
@@ -33,9 +33,9 @@ public class SwitchSceneAB : MonoBehaviour
     {
         if (isF & Input.GetKeyDown(KeyCode.F))
         {
-            GameObject go = GameObject.Find("Door4");
+            GameObject go = GameObject.FindWithTag("Door3");
             go.transform.position = new Vector3(24, 1, 0);
-            transform.position = new Vector3(-37, 1, 0);
+            transform.position = new Vector3(85, 1, 0);
         }
     }
 }

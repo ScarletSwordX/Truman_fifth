@@ -12,6 +12,7 @@ public class Closet : MonoBehaviour
     public string npcText;
     public bool isF;
     public bool isG;   
+    public GameObject Image;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +37,7 @@ public class Closet : MonoBehaviour
     {
         isF = false;
         TextBox.SetActive(false);
+        Image.SetActive(false);
         if (isG)
         {
             SceneManager.LoadScene("Scene2",LoadSceneMode.Single);
@@ -47,6 +49,7 @@ public class Closet : MonoBehaviour
         if (isF & Input.GetKeyDown(KeyCode.F))
         {
             TextBox.SetActive(true);
+            Image.SetActive(true);
             Text.text = npcText;
             isG = true;
         }
