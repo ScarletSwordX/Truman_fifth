@@ -1,17 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class BookShelf : MonoBehaviour
+public class SwitchScene3AC : MonoBehaviour
 {
-    public GameObject TextBox;
-    public TextMeshProUGUI Text;
-    public string npcText;
     public bool isF;
-    public bool isG;
-    public GameObject Image;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +14,7 @@ public class BookShelf : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        interaction();
+        Switch();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -35,23 +28,14 @@ public class BookShelf : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         isF = false;
-        TextBox.SetActive(false);
-        Image.SetActive(false);
-        if (isG)
-        {
-            SceneManager.LoadScene("Scene3", LoadSceneMode.Single);
-        }
     }
-
-    void interaction()
+    void Switch()
     {
         if (isF & Input.GetKeyDown(KeyCode.F))
         {
-            TextBox.SetActive(true);
-            Image.SetActive(true);
-            Text.text = npcText;
-            isG = true;
+            GameObject go = GameObject.Find("Door5");
+            go.transform.position = new Vector3(71, 1, 0);
+            transform.position = new Vector3(27, 35, 0);
         }
-
     }
 }
