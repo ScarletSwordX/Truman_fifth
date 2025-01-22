@@ -2,20 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class BookShelf2 : MonoBehaviour
+public class Closet : MonoBehaviour
 {
     public GameObject TextBox;
     public TextMeshProUGUI Text;
     public string npcText;
     public bool isF;
-    public bool isG;
+    public bool isG;   
     public GameObject Image;
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -39,7 +40,7 @@ public class BookShelf2 : MonoBehaviour
         Image.SetActive(false);
         if (isG)
         {
-            SceneManager.LoadScene("Scene3", LoadSceneMode.Single);
+            SceneManager.LoadScene("Chapter2", LoadSceneMode.Single);
         }
     }
 

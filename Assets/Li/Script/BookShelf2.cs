@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class BookShelf3 : MonoBehaviour
+public class BookShelf2 : MonoBehaviour
 {
     public GameObject TextBox;
     public TextMeshProUGUI Text;
@@ -39,7 +39,7 @@ public class BookShelf3 : MonoBehaviour
         Image.SetActive(false);
         if (isG)
         {
-            SceneManager.LoadScene("Scene4", LoadSceneMode.Single);
+            SceneManager.LoadScene("Chapter3", LoadSceneMode.Single);
         }
     }
 
