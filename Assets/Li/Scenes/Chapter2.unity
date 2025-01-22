@@ -1584,7 +1584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TextBox: {fileID: 2007844890}
   Text: {fileID: 1059329683}
-  npcText: "\u83B7\u5F97 \u7CD6\u4E38\u76D2\u5B50 \uFF0C\u79BB\u5F00\u8863\u67DC"
+  npcText: "\u83B7\u5F97 \u7CD6\u4E38\u76D2\u5B50 \uFF0C\u79BB\u5F00\u4E66\u67B6\u8FDB\u5165\u4E0B\u4E00\u5173"
   isF: 0
   isG: 0
   Image: {fileID: 1188715930}
