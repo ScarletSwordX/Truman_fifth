@@ -123,17 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &84259556 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4635408639613106554, guid: 7162d1180b0d1f84b939f85512a20024, type: 3}
-  m_PrefabInstance: {fileID: 4635408639895244285}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a537354babfe8584e8baa295b97b30f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &122857899
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,7 +898,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &628489122
 RectTransform:
   m_ObjectHideFlags: 0
@@ -976,7 +965,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 84259556}
+      - m_Target: {fileID: 4635408639613106554, guid: 7162d1180b0d1f84b939f85512a20024, type: 3}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: SwitchScene
         m_Mode: 5
@@ -985,7 +974,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Chapter4_MainBedRoom
+          m_StringArgument: Chapter5
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &628489124
@@ -1390,7 +1379,7 @@ GameObject:
   - component: {fileID: 784583310}
   - component: {fileID: 784583311}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: CoinImages
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3474,10 +3463,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5749889326212926489, guid: cbd5b80b8e7fe5c4f80b8f01f4df042e, type: 3}
-      propertyPath: moveSpeed
-      value: 5.21
-      objectReference: {fileID: 0}
     - target: {fileID: 5749889326212926490, guid: cbd5b80b8e7fe5c4f80b8f01f4df042e, type: 3}
       propertyPath: m_RootOrder
       value: 1
