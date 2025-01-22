@@ -12,6 +12,15 @@ EditorBuildSettings:
     path: Assets/Yang/Scenes/Chapter5.unity
     guid: e6ac4f1015a8f2548858d3d00e429800
   - enabled: 1
-    path: Assets/Zhang/Chapter6_LivingRoom.unity
+    path: Assets/Zhang/Scene/Chapter6_LivingRoom.unity
     guid: 1e95a35dda7ecaa468ed888458576582
+  - enabled: 1
+    path: Assets/Li/Scenes/Chapter1.unity
+    guid: 3b4c4ee1230c8034297d45186182e903
+  - enabled: 1
+    path: Assets/Li/Scenes/Chapter2.unity
+    guid: bb09e545384f600408a8461f662e64da
+  - enabled: 1
+    path: Assets/Li/Scenes/Chapter3.unity
+    guid: 41498514586c27f4eb6f8fb1838a7427
   m_configObjects: {}
