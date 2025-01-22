@@ -26,8 +26,10 @@ public class Guide : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
+        if (TextBox != null) 
         TextBox.SetActive(true);
-        Text.text = npcText;
+        if (Text != null)
+            Text.text = npcText;
     }
 
     private void OnTriggerExit2D(Collider2D collision)

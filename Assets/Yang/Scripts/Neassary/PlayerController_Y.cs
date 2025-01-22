@@ -22,6 +22,7 @@ public class PlayerController_Y : MonoBehaviour
     {
         Move();
         Filp();
+        Voice();
     }
 
     private void Move()
@@ -32,8 +33,32 @@ public class PlayerController_Y : MonoBehaviour
         //检测移动速度绝对值是否大于零 生成bool值
         bool isMove = Mathf.Abs(movement.x) > Mathf.Epsilon;
         anim.SetBool("isMove",isMove);
+        
+    }
+
+
+    private void Voice()
+    {
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
+        {
+            VoiceManager.Instance.walkVoice();
+        }
+        else if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+        {
+            VoiceManager.Instance.StopWalk();
+        }
+
+        if (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.R))
+        {
+            VoiceManager.Instance.FVoice();
+        }
+        /*else if (Input.GetKeyUp(KeyCode.F) || Input.GetKeyUp(KeyCode.R))
+        {
+            VoiceManager.Instance.StopF();
+        }*/
 
     }
+
 
     private void Filp()
     {

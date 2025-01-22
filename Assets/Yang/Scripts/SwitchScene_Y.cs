@@ -36,6 +36,7 @@ public class SwitchScene_Y : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.F) && isInDoor == true)
         {
+            VoiceManager.Instance.DoorVoice();
             switch(NextScene)
             {
                 case GameState.M_LivingRoom:
