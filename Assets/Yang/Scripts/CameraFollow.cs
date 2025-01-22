@@ -6,8 +6,8 @@ public class CameraFollow : MonoBehaviour
     public Transform target;
 
     // 
-    [Header("相机与目标之间的偏移量")]
-    public Vector3 offset = new Vector3(0, 0, -10);
+    //[Header("相机与目标之间的偏移量")]
+    private Vector3 offset = new Vector3(0, 4, -10);
 
     // 
     //[Header("平滑因子，值越大越快跟随")]
