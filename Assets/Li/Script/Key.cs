@@ -52,7 +52,6 @@ public class Key : MonoBehaviour
         if (isF & Input.GetKeyDown(KeyCode.F))
         {
             TextBox.SetActive(true);
-            Text1.text = npcText1;
         }   
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {

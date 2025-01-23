@@ -2804,6 +2804,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD
 --- !u!1001 &1320184500
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2861,6 +2862,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7162d1180b0d1f84b939f85512a20024, type: 3}
+=======
+>>>>>>> parent of 1ced02a (前三关完成)
 --- !u!1 &1372546896
 GameObject:
   m_ObjectHideFlags: 0
