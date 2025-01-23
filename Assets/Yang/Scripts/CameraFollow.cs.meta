@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/Yang/Scripts/CameraFollow.cs.meta
 guid: ebcd84d4837d71d4ca5024cd6ad0cfda
+========
+guid: e1b2422aec4ae86429d719602daf6126
+>>>>>>>> Stashed changes:Assets/Li/Script/Newspaper.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
