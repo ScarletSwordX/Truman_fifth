@@ -1,22 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 
 public class ButtonEntering : MonoBehaviour
 {
     public GameObject targetObject; // 要更改文字的目标对象
-    private Text uiText;           // UI Text 组件引用
+    private TMP_Text textMeshPro;   // TextMeshPro 组件引用
     public int number = 0;
 
     void Start()
     {
         if (targetObject != null)
         {
-            uiText = targetObject.GetComponent<Text>();
-            if (uiText == null)
+            textMeshPro = targetObject.GetComponent<TMP_Text>();
+            if (textMeshPro == null)
             {
-                Debug.LogWarning("Text (Legacy) component not found on target object.");
+                Debug.LogWarning("TMP_Text component not found on target object.");
             }
         }
         else
@@ -25,46 +26,46 @@ public class ButtonEntering : MonoBehaviour
         }
     }
 
-    public void AppendText(string newText)
+public void AppendText(string newText)
+{
+    if (textMeshPro != null)
     {
-        if (uiText != null)
-        {
-            // 将传入的字符串拼接到当前文本后
-            uiText.text += newText;
-        }
-        else
-        {
-            Debug.LogWarning("Text (Legacy) component not found on target object.");
-        }
+        // 将传入的字符串拼接到当前文本后
+        textMeshPro.text += newText;
     }
+    else
+    {
+        Debug.LogWarning("TextMeshPro component not found on target object.");
+    }
+}
 
     public void ClearText()
     {
-        if (uiText != null)
+        if (textMeshPro != null)
         {
-            uiText.text = string.Empty;
+            textMeshPro.text = string.Empty;
         }
         else
         {
-            Debug.LogWarning("Text (Legacy) component not found on target object.");
+            Debug.LogWarning("TextMeshPro component not found on target object.");
         }
     }
 
     public void IsTextEqualTo()
     {
-        // if (uiText == number.ToString())
-        // {
-        //     // 检查文本内容是否等于 number（可进一步实现逻辑）
-        //     // if (uiText.text == number.ToString()) { ... }
-        // }
-        // else
-        // {
-        //     Debug.LogWarning("Text (Legacy) component not found on target object.");
-        // }
+        if (textMeshPro != null)
+        {
+// textMeshPro.text == number;
+        }
+        else
+        {
+            Debug.LogWarning("TextMeshPro component not found on target object.");
+            // return false;
+        }
     }
 
     void Update()
     {
-        // 可添加需要实时执行的逻辑
+        
     }
 }
