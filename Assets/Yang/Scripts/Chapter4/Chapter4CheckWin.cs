@@ -61,20 +61,20 @@ public class Chapter4CheckWin : MonoBehaviour
     {
         if (CoinImages == null || CoinImages.Length == 0)
         {
-            Debug.LogWarning("没有硬币图像被分配");
+            //Debug.LogWarning("没有硬币图像被分配");
             return false;
         }
         foreach (GameObject coinImage in CoinImages)
         {
             if (coinImage == null)
             {
-                Debug.LogWarning("硬币图像数组中存在空引用");
+                //Debug.LogWarning("硬币图像数组中存在空引用");
                 return false;
             }
 
             if (!coinImage.activeInHierarchy)
             {
-                Debug.Log($"硬币图像 {coinImage.name} 未激活");
+                //Debug.Log($"硬币图像 {coinImage.name} 未激活");
                 return false;
             }
         }
