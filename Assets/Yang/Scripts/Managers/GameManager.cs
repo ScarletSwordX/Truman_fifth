@@ -8,10 +8,13 @@ public class GameManager : MonoBehaviour
     // 单例模式，确保只有一个GameManager实例
     public static GameManager Instance;
 
+    public LoadingAnimation La;
     private GameObject StopPanle;
 
     private void Awake()
     {
+
+        //La = GameObject.Find("Loading").GetComponent<LoadingAnimation>();  
         if (Instance == null)
         {
             Instance = this;
@@ -19,6 +22,7 @@ public class GameManager : MonoBehaviour
         }
         else Destroy(gameObject);
         currentState = GameState.Playing;
+
     }
 
     // 游戏状态枚举
@@ -39,6 +43,7 @@ public class GameManager : MonoBehaviour
         StopPanle = firstChildTransform.gameObject;
         StopPanle.SetActive(false);
         SetState(GameState.Playing);
+        //La = GameObject.Find("Loading").GetComponent<LoadingAnimation>();
     }
 
     private void Update()
@@ -128,6 +133,7 @@ public class GameManager : MonoBehaviour
     /// <param name="sceneName"></param>
     public void SwitchScene(string sceneName)
     {
+        Debug.Log("111");
         SceneManager.LoadScene(sceneName);
     }
 
