@@ -1,15 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class Key : MonoBehaviour
+public class Key2 : MonoBehaviour
 {
     public bool isF;
     int a;
     int b;
     int c;
+    int d;
     public GameObject TextBox;
     public TextMeshProUGUI Text1;
     public string npcText1;
@@ -17,7 +17,7 @@ public class Key : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -32,6 +32,7 @@ public class Key : MonoBehaviour
         a = 0;
         b = 0;
         c = 0;
+        d = 0;
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -40,11 +41,12 @@ public class Key : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        isF=false;
+        isF = false;
         TextBox.SetActive(false);
         a = 0;
         b = 0;
         c = 0;
+        d = 0;
     }
 
     void password()
@@ -52,8 +54,8 @@ public class Key : MonoBehaviour
         if (isF & Input.GetKeyDown(KeyCode.F))
         {
             TextBox.SetActive(true);
-            Text1.text = npcText1;
-        }   
+            Text1.text= npcText1;
+        }
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             a = 1;
@@ -62,14 +64,18 @@ public class Key : MonoBehaviour
         {
             b = 1;
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3)&  b == 1)
+        if (Input.GetKeyDown(KeyCode.Alpha3) & b == 1)
         {
             c = 1;
         }
-        if (a == 1 & b == 1 & c == 1&Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.Alpha5) & c == 1)
+        {
+            d = 1;
+        }
+        if (a == 1 & b == 1 & c == 1 &d ==1& Input.GetKeyDown(KeyCode.F))
         {
             TextBox.SetActive(false);
-            GameObject.Find("Closet").GetComponent<Closet>().enabled = true;
+            GameObject.Find("BookShelf").GetComponent<BookShelf2>().enabled = true;
             this.enabled = false;
         }
     }
